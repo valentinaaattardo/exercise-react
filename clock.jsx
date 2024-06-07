@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import classes from "./Clock.module.css";
+import classes from "./clock.module.css";
 import { LanguageContext } from "./languageContext";
 
 export function Clock() {
