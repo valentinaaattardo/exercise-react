@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react";
+import classes from './counter.module.css'
 
 export function Counter({ initialValue = 0 }) {
     const [counter, setCounter] = useState(initialValue);
@@ -26,10 +27,11 @@ function handleCounterReset() {
 }
     return (
         <div>
-            <h2>I have counted to {counter}</h2>
-            <button onClick={handleCounterIncrement}>Increment</button>
-            <button onClick={handleCounterDecrement}>Decrement</button>
-            <button onClick={handleCounterReset}>Reset</button>
+                        <p className={counter % 2 === 0 ? classes.evenBg : classes.oddBg}>I have counted to {counter}</p>
+            <button className={classes.button} onClick={handleCounterIncrement}>Increment</button>
+            <button className={classes.button} onClick={handleCounterDecrement}>Decrement</button>
+            <button className={classes.button} onClick={handleCounterReset}>Reset</button>
+
         </div>
     )
 }

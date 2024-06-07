@@ -20,7 +20,7 @@ export function App() {
     alert(`Current time is: ${currentTime}`);
   };
   return(
-    <div>
+    <div className="app">
       <h2>My application</h2>
       <hr />
       <Hello />

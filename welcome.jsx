@@ -2,9 +2,12 @@ import { Age } from "./age";
 
 //welcome.jsx
 export function Welcome({name,age}) {
-
+  const WelcomeStyle = {
+    backgroundColor: 'greenyellow',
+    color: '#333',
+  }
     return ( 
-    <div>
+      <div style={WelcomeStyle}>
     <p>Welcome,{name}</p>
       {age > 18 && <Age age={age} />}
       {age && <Age age={age} />}

@@ -1,0 +1,14 @@
+.button {
+    padding: 5px 10px;
+    background-color:pink;
+}
+
+.evenBg {
+    background-color: blue;
+    color: white;
+}
+
+.oddBg {
+    background-color: green ;
+    color: white;
+}
