@@ -8,3 +8,12 @@
         color: maroon;
     }
 }
+
+.content-app-hidden {
+    display: none;
+}
+
+.content-app {
+    background-color: white;
+    border: 5px solid red;
+}

@@ -27,7 +27,13 @@ export function Todolist({ initialTodos }) {
       };
 
   return (
-    <div>
+    <div style={{
+      color: 'white',
+      backgroundColor: 'maroon',
+      border: '2px solid black',
+      borderRadius: '30px',
+      padding: '5px',
+    }}>
         <h2>My Todo List:</h2>
       <ul>
         {todos.map((todo, index) => (
@@ -35,7 +41,9 @@ export function Todolist({ initialTodos }) {
           <button onClick={handleRemove}>Remove</button></li>
         ))}
       </ul>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} style={{
+        padding: '10px',
+      }}>
       <input type="text" onChange={HandleInputChange} value={todo}/>
       <button type="submit">Submit</button>
       <button onClick={handleResetButton}>Reset</button>

@@ -11,16 +11,17 @@ import { InteractiveWelcome } from "./interactiveWelcome";
 import { MyForm } from "./myForm";
 import { MyUncontrolledLogin } from "./uncontrolledLogin";
 import { MyList } from "./myList";
-import { Color } from "./color";
 import { Colors } from "./colors";
 import { Todolist } from "./toDoList";
+import { Todolist2 } from "./toDoList2";
+import { Container } from "./container";
 export function App() {
   const showCurrentTime = () => {
     const currentTime = new Date().toLocaleTimeString();
     alert(`Current time is: ${currentTime}`);
   };
   return(
-    <div className="app">
+    <Container title={<h1>My Page to try</h1>}>
       <h2>My application</h2>
       <hr />
       <Hello />
@@ -48,4 +49,8 @@ export function App() {
       ]} />
 
 <Todolist initialTodos = {['Cook', 'Sleep', 'Play Music', 'Sport']} />
-    </div> )}
+    
+<Todolist2 />
+
+</Container>
+     )}
