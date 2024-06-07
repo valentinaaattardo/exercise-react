@@ -1,6 +1,10 @@
-//hello.jsx
+import { useContext } from "react"
+import { LanguageContext } from "./languageContext"
+
 export function Hello() {
-  return <h2>Hello, World!</h2>;
+const language = useContext(LanguageContext)
+
+    return <h2>{language === 'en' ? 'Hello World!' : 'Ciao Mondo!'}</h2>
 }
 
 

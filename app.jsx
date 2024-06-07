@@ -16,13 +16,16 @@ import { Todolist } from "./toDoList";
 import { Todolist2 } from "./toDoList2";
 import { Container } from "./container";
 export function App() {
-  const showCurrentTime = () => {
-    const currentTime = new Date().toLocaleTimeString();
-    alert(`Current time is: ${currentTime}`);
-  };
+  const [language, setLanguage] = useState('en')
+
+function handleSetLanguage(language) {
+  setLanguage(language) }
   return(
-    <Container title={<h1>My Page to try</h1>}>
-      <h2>My application</h2>
+    <div>
+    <button onClick={() => handleSetLanguage('it')}>IT</button>
+    <button onClick={() => handleSetLanguage('en')}>EN</button>
+<Container title={<h1>My Page to try</h1>}>
+    <LanguageContext.Provider value={language}>
       <hr />
       <Hello />
       <Message />
@@ -51,6 +54,8 @@ export function App() {
 <Todolist initialTodos = {['Cook', 'Sleep', 'Play Music', 'Sport']} />
     
 <Todolist2 />
+</LanguageContext.Provider>
 
 </Container>
+</div>
      )}
