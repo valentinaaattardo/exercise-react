@@ -1,11 +1,17 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react";
 
-export function Counter({initialValue = 0}) {
-const [ counter, setCounter ] = useState(initialValue)
+export function Counter({ initialValue = 0 }) {
+    const [counter, setCounter] = useState(initialValue);
+    const prevCounterRef = useRef(initialValue);
 
-useEffect(() => {
-    console.log(`The value of the counter is ${counter}`)
-}, [counter])
+    useEffect(() => {
+        if (counter > prevCounterRef.current) {
+            console.log("Counter increased from", prevCounterRef.current, "to", counter);
+        } else if (counter < prevCounterRef.current) {
+            console.log("Counter decreased from", prevCounterRef.current, "to", counter);
+        }
+        prevCounterRef.current = counter;
+    }, [counter]);
 
 function handleCounterIncrement() {
     // setCounter(counter + 1)
