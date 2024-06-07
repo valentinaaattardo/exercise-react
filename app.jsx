@@ -6,6 +6,7 @@ import { Welcome } from "./welcome";
 import { AlertClock } from "./alertClock";
 import { CounterDisplay } from "./counterdisplay";
 import { Clock } from "./clock";
+import { MouseClicker } from "./mouseClick";
 export function App() {
   const showCurrentTime = () => {
     const currentTime = new Date().toLocaleTimeString();
@@ -21,4 +22,5 @@ export function App() {
       <AlertClock/>
       <CounterDisplay/>
       <Clock/>
+      <MouseClicker/>
     </div> )}
