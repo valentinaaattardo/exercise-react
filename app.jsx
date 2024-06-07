@@ -5,6 +5,7 @@ import { Message } from "./message";
 import { Welcome } from "./welcome";
 import { AlertClock } from "./alertClock";
 import { CounterDisplay } from "./counterdisplay";
+import { Clock } from "./clock";
 export function App() {
   const showCurrentTime = () => {
     const currentTime = new Date().toLocaleTimeString();
@@ -19,4 +20,5 @@ export function App() {
       <Welcome name= 'John' age= {17}/>
       <AlertClock/>
       <CounterDisplay/>
+      <Clock/>
     </div> )}
