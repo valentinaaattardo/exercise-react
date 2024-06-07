@@ -9,6 +9,7 @@ import { Clock } from "./clock";
 import { MouseClicker } from "./mouseClick";
 import { InteractiveWelcome } from "./interactiveWelcome";
 import { MyForm } from "./myForm";
+import { MyUncontrolledLogin } from "./uncontrolledLogin";
 export function App() {
   const showCurrentTime = () => {
     const currentTime = new Date().toLocaleTimeString();
@@ -27,4 +28,5 @@ export function App() {
       <MouseClicker/>
       <InteractiveWelcome/>
       <MyForm/>
+      <MyUncontrolledLogin/>
     </div> )}
