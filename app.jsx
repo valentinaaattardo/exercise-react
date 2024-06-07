@@ -13,6 +13,7 @@ import { MyUncontrolledLogin } from "./uncontrolledLogin";
 import { MyList } from "./myList";
 import { Color } from "./color";
 import { Colors } from "./colors";
+import { Todolist } from "./toDoList";
 export function App() {
   const showCurrentTime = () => {
     const currentTime = new Date().toLocaleTimeString();
@@ -45,4 +46,6 @@ export function App() {
         {id: 3, name: 'white'},
         {id: 4, name: 'yellow'},
       ]} />
+
+<Todolist initialTodos = {['Cook', 'Sleep', 'Play Music', 'Sport']} />
     </div> )}
